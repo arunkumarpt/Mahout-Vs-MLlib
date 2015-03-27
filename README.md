@@ -2,6 +2,51 @@
 
 # What is Machine Learning?
 
+ref :- https://share.coursera.org/wiki/index.php/ML:Introduction
+
+Two definitions of Machine Learning are offered. Arthur Samuel described it as: "the field of study that gives computers the ability to learn without being explicitly programmed." This is an older, informal definition.
+
+
+Tom Mitchell provides a more modern definition: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."
+
+Example: playing checkers.
+E = the experience of playing many games of checkers
+T = the task of playing checkers.
+P = the probability that the program will win the next game.
+
+#Supervised Learning
+In supervised learning, we are given a data set and already know what our correct output should look like, having the idea that there is a relationship between the input and the output.
+    - Regression
+    - Classification
+
+#Unsupervised Learning
+Unsupervised learning, on the other hand, allows us to approach problems with little or no idea what our results should look like. We can derive structure from data where we don't necessarily know the effect of the variables.
+    - Clustering
+
+#Linear Regression with One Variable
+    - Model Representation
+    - The Hypothesis Function
+    - Cost Function
+    - Gradient Descent
+    - Gradient Descent for Linear Regression
+
+#Machine Learning with Mahout
+
+#What is Apache Mahout?
+    - A Mahout is an elephant trainer/driver/keeper, hence…
+    - Hadoop brings ---
+    - Library of machine learning algorithms
+#20 News Gruop Classification
+
+
+
+
+
+
+#Machine Learning with Spark
+
+
+
 
 # Valuble Links
 
