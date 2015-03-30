@@ -32,9 +32,12 @@ Unsupervised learning, on the other hand, allows us to approach problems with li
 
 #Commonflow 
 
+```
+Dataset -> split - Traing - Train Model - Test Model
+                 - Test
+```
 
-#Reference
-
+Reference
 https://share.coursera.org/wiki/index.php/ML:Introduction
 
 
