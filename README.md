@@ -124,8 +124,8 @@ If Your ML algorithm mapped to the single MR job - main difference will be only 
 Things will be different if Your algorithm is mapped to many jobs. In this case we will have the same difference on overhead per iteration and it can be game changer. 
 Lets assume that we need 100 iterations, each needed 5 seconds of cluster CPU.
 
-On Spark: it will take 100*5 + 100*1 seconds = 600 seconds.
-On Hadoop: MR (Mahout) it will take 100*5+100*30 = 3500 seconds.
+On Spark: it will take ```100*5 + 100*1``` seconds = 600 seconds.
+On Hadoop: MR (Mahout) it will take ```100*5+100*30``` = 3500 seconds.
 
 In the same time Hadoop MR is much more mature framework then Spark and if you have a lot of data, and stability is paramount 
 ### Comparison
