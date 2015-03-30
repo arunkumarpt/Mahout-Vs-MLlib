@@ -75,6 +75,129 @@ Mahout provides an implementation of various machine learning algorithms, some i
 
 http://hortonworks.com/hadoop/mahout/
 
+## Mahout Local Mode example
+### Data
+```
+1,10,1.0
+1,11,2.0
+1,12,5.0
+1,13,5.0
+1,14,5.0
+1,15,4.0
+1,16,5.0
+1,17,1.0
+1,18,5.0
+2,10,1.0
+2,11,2.0
+2,15,5.0
+2,16,4.5
+2,17,1.0
+2,18,5.0
+3,11,2.5
+3,12,4.5
+3,13,4.0
+3,14,3.0
+3,15,3.5
+3,16,4.5
+3,17,4.0
+3,18,5.0
+4,10,5.0
+4,11,5.0
+4,12,5.0
+4,13,0.0
+4,14,2.0
+4,15,3.0
+4,16,1.0
+4,17,4.0
+4,18,1.0
+```
+###Recommender
+```
+package mahout.ml;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+import org.apache.mahout.cf.taste.common.TasteException;
+import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
+import org.apache.mahout.cf.taste.impl.neighborhood.ThresholdUserNeighborhood;
+import org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender;
+import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity;
+import org.apache.mahout.cf.taste.model.DataModel;
+import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
+import org.apache.mahout.cf.taste.recommender.RecommendedItem;
+import org.apache.mahout.cf.taste.recommender.UserBasedRecommender;
+import org.apache.mahout.cf.taste.similarity.UserSimilarity;
+
+public class recommender {
+
+	public static void main(String[] args) throws IOException, TasteException {
+		DataModel model = new FileDataModel(new File("dataset.csv"));
+		UserSimilarity similarity = new PearsonCorrelationSimilarity(model);
+		UserNeighborhood neighborhood = new ThresholdUserNeighborhood(0.1, similarity, model);
+		UserBasedRecommender recommender = new GenericUserBasedRecommender(model, neighborhood, similarity);
+		
+		List<RecommendedItem> recommendations = recommender.recommend(2, 3);
+		for (RecommendedItem recommendation : recommendations) {
+		  System.out.println(recommendation);
+		}
+	
+	}
+
+}
+
+```
+### Evaluate model
+
+```
+package mahout.ml;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.mahout.cf.taste.common.TasteException;
+import org.apache.mahout.cf.taste.eval.RecommenderBuilder;
+import org.apache.mahout.cf.taste.eval.RecommenderEvaluator;
+import org.apache.mahout.cf.taste.impl.eval.AverageAbsoluteDifferenceRecommenderEvaluator;
+import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
+import org.apache.mahout.cf.taste.impl.neighborhood.ThresholdUserNeighborhood;
+import org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender;
+import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity;
+import org.apache.mahout.cf.taste.model.DataModel;
+import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
+import org.apache.mahout.cf.taste.recommender.Recommender;
+import org.apache.mahout.cf.taste.similarity.UserSimilarity;
+
+
+class MyRecommenderBuilder implements RecommenderBuilder{
+
+	public Recommender buildRecommender(DataModel dataModel) throws TasteException {
+		UserSimilarity similarity = new PearsonCorrelationSimilarity(dataModel);
+		UserNeighborhood neighborhood = new ThresholdUserNeighborhood(0.1, similarity, dataModel);
+		return new GenericUserBasedRecommender(dataModel, neighborhood, similarity);
+	}
+	
+}
+
+
+public class EvaluateRecommender {
+
+	
+	public static void main(String[] args) throws IOException, TasteException {
+		// TODO Auto-generated method stub
+
+		DataModel model = new FileDataModel(new File("dataset.csv"));
+		RecommenderEvaluator evaluator = new AverageAbsoluteDifferenceRecommenderEvaluator();
+		RecommenderBuilder builder = new MyRecommenderBuilder();
+		double result = evaluator.evaluate(builder, null, model, 0.9, 1.0);
+		System.out.println(result);
+		 	
+	}
+
+}
+```
+
 
 #Machine Learning with Spark
 
