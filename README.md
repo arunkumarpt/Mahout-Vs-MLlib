@@ -274,10 +274,73 @@ http://stackoverflow.com/questions/23511459/what-is-the-difference-between-apach
 
 #Demo
 ##Mahout Movie Recommendation 
+
+##Datasets Samples
+###movies.dat 
+```
+3936::Phantom of the Opera, The (1943)::Drama|Thriller
+3937::Runaway (1984)::Sci-Fi|Thriller
+3938::Slumber Party Massacre, The (1982)::Horror
+3939::Slumber Party Massacre II, The (1987)::Horror
+3940::Slumber Party Massacre III, The (1990)::Horror
+3941::Sorority House Massacre (1986)::Horror
+
+```
+###Ratings
+```
+5558::1005::1::959391725
+5558::1009::2::959391435
+5558::1010::1::959391467
+5558::1012::1::959391368
+5558::1013::2::959391552
+5558::1014::1::959391435
+5558::1015::1::959391552
+5558::1018::2::959391769
+```
+###Users
+```
+6014::M::45::1::80634
+6015::F::25::9::80013
+6016::M::45::1::37209
+6017::F::35::7::21117
+6018::M::35::1::48906
+6019::M::25::0::10024
+6020::M::50::16::10023
+```
+###user0 list
+```
+Toy Story (1995): 1
+Independence Day (a.k.a. ID4) (1996): 5
+Dances with Wolves (1990): 1
+Star Wars: Episode VI - Return of the Jedi (1983): 5
+Mission: Impossible (1996): 5
+Ace Ventura: Pet Detective (1994): 5
+Die Hard: With a Vengeance (1995): 5
+Batman Forever (1995): 5
+Pretty Woman (1990): 1
+Men in Black (1997): 5
+Dumb & Dumber (1994): 5
+```
+### Commands
 ```
 hadoop fs -rmr temp/
 bin/mahout recommenditembased --input input/ratings1 --usersFile input/user0 --numRecommendations 20 --output output7/ --similarityClassname SIMILARITY_PEARSON_CORRELATION
 ```
+
+###Output
+```
+1405:5.0  Beavis and Butt-head Do America (1996)
+3082:5.0  World Is Not Enough, The (1999)
+1779:5.0  Sphere (1998)
+2402:5.0  Rambo: First Blood Part II (1985)
+466:5.0   Hot Shots! Part Deux (1993)
+1597:5.0  Conspiracy Theory (1997)
+2195:5.0  Dirty Work (1998)
+1377:5.0  Batman Returns (1992)
+379:5.0   Timecop (1994)
+849:5.0   Escape from L.A.
+```
+
 #####Referene
 
 http://girlincomputerscience.blogspot.com/2010/11/apache-mahout.html
@@ -285,6 +348,20 @@ http://girlincomputerscience.blogspot.com/2010/11/apache-mahout.html
 ##Spark Movie Recommendation 
 ```
 bin/spark-submit --driver-memory 2g --class MovieLensALS1  MovieRecommendation.jar movielens/ myratings.txt
+```
+
+###Output
+```
+1: Anatomy (Anatomie) (2000)
+ 2: Hunted, The (1995)
+ 3: Coldblooded (1995)
+ 4: Police Story 4: Project S (Chao ji ji hua) (1993)
+ 5: Very Thought of You, The (1998)
+ 6: Diamonds (1999)
+ 7: Zachariah (1971)
+ 8: Spy Hard (1996)
+ 9: Happy Gilmore (1996)
+10: Six-String Samurai (1998)
 ```
 #####Referene
 
