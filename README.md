@@ -9,12 +9,6 @@ Two definitions of Machine Learning are offered. Arthur Samuel described it as: 
 Tom Mitchell provides a more modern definition: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."
 
 Example: Assume that we are creating a cricket game for 1 over to bat with a target of 10 runs.
-   
-   | Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
 
     - E = the experience of playing many games of cricket
     - T = the task of playing cricket.
@@ -31,11 +25,11 @@ Unsupervised learning, on the other hand, allows us to approach problems with li
     - Clustering
 
 #Linear Regression with One Variable
+
     - Model Representation
     - The Hypothesis Function
     - Cost Function
-    - Gradient Descent
-    - Gradient Descent for Linear Regression
+    - Correlation
 
 #Commonflow 
 
@@ -48,46 +42,46 @@ Reference
 https://share.coursera.org/wiki/index.php/ML:Introduction
 
 
-#Machine Learning with Mahout 
-
-
+##Machine Learning with Mahout 
 
 #What is Apache Mahout?
+
+    - Mahout is a Java library – Implementing Machine Learning techniques
     - A Mahout is an elephant trainer/driver/keeper, hence…
-    - Hadoop brings ---
+    - Hadoop brings
     - Library of machine learning algorithms
-    -Mahout is a Java library – Implementing Machine Learning techniques
     
-What Mahout Does
+    
+# What Mahout Does
+
 Mahout supports four main data science use cases:
 
 Collaborative filtering – mines user behavior and makes product recommendations (e.g. Amazon recommendations)
+
 Clustering – takes items in a particular class (such as web pages or newspaper articles) and organizes them into naturally occurring groups, such that items belonging to the same group are similar to each other
+
 Classification – learns from existing categorizations and then assigns unclassified items to the best category
+
 Frequent itemset mining – analyzes items in a group (e.g. items in a shopping cart or terms in a query session) and then identifies which items typically appear together
 
 
-http://hortonworks.com/hadoop/mahout/
 
-How Mahout Works
+#How Mahout Works
+
 Mahout provides an implementation of various machine learning algorithms, some in local mode and some in distributed mode (for use with Hadoop). Each algorithm in the Mahout library can be invoked using the Mahout command line.
     
-
-
-
-
-
-
-
+Reference
+http://hortonworks.com/hadoop/mahout/
 
 
 #Machine Learning with Spark
+
 MLlib is Apache Spark's scalable machine learning library.
 
-Ease of Use
+###Ease of Use
 Usable in Java, Scala and Python.
 
-MLlib fits into Spark's APIs and interoperates with NumPy in Python (starting in Spark 0.9). You can use any Hadoop data source (e.g. HDFS, HBase, or local files), making it easy to plug into Hadoop workflows.
+MLlib fits into Spark's APIs. You can use any Hadoop data source (e.g. HDFS, HBase, or local files), making it easy to plug into Hadoop workflows.
 
 Performance
 High-quality algorithms, 100x faster than MapReduce.
