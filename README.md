@@ -38,7 +38,8 @@ Dataset -> split - Traing - Train Model - Test Model
                  - Test
 ```
 
-Reference
+#####Reference
+
 https://share.coursera.org/wiki/index.php/ML:Introduction
 
 
@@ -70,7 +71,8 @@ Frequent itemset mining – analyzes items in a group (e.g. items in a shopping 
 
 Mahout provides an implementation of various machine learning algorithms, some in local mode and some in distributed mode (for use with Hadoop). Each algorithm in the Mahout library can be invoked using the Mahout command line.
     
-Reference
+#####Reference
+
 http://hortonworks.com/hadoop/mahout/
 
 
@@ -103,7 +105,8 @@ basic statistics
 feature transformations
 
 
-References
+#####References
+
 https://mahout.apache.org/users/clustering/visualizing-sample-clusters.html
 https://samarthbhargav.wordpress.com/2014/04/22/logistic-regression-in-apache-spark/
 http://www.cise.ufl.edu/class/cis6930fa11lad/cis6930fa11_Spark.pdf
@@ -124,7 +127,8 @@ On Spark: it will take 100*5 + 100*1 seconds = 600 seconds.
 On Hadoop: MR (Mahout) it will take 100*5+100*30 = 3500 seconds.
 In the same time Hadoop MR is much more mature framework then Spark and if you have a lot of data, and stability is paramount - I would consider Mahout as serious alternative.
 
-References
+#####References
+
 http://stackoverflow.com/questions/23511459/what-is-the-difference-between-apache-mahout-and-apache-sparks-mllib
 
 #Demo
@@ -133,14 +137,16 @@ http://stackoverflow.com/questions/23511459/what-is-the-difference-between-apach
 hadoop fs -rmr temp/
 bin/mahout recommenditembased --input input/ratings1 --usersFile input/user0 --numRecommendations 20 --output output7/ --similarityClassname SIMILARITY_PEARSON_CORRELATION
 ```
-Referene
+#####Referene
+
 http://girlincomputerscience.blogspot.com/2010/11/apache-mahout.html
 
 ##Spark Movie Recommendation 
 ```
 bin/spark-submit --driver-memory 2g --class MovieLensALS1  MovieRecommendation.jar movielens/ myratings.txt
 ```
-Referene
+#####Referene
+
 https://databricks-training.s3.amazonaws.com/movie-recommendation-with-mllib.html
 
 
@@ -157,7 +163,7 @@ sbin/start-all.sh
 http://localhost:8080/ 
 ```
 
-Reference
+#####Reference
 https://mahout.apache.org/users/sparkbindings/play-with-shell.html
 
 
