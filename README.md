@@ -1,4 +1,17 @@
 # Mahout-Vs-MLlib
+## Topics
+
+    What is Machine Learning?
+    Supervised Learning
+    Unsupervised Learning
+    Linear Regression with One Variable
+    What is Apache Mahout?
+    How Mahout Works - Local Demo
+    Machine Learning with Spark
+    Mahout Vs Spark Mllib
+    Demo : Mahout Movie Recommender System
+    Demo : Mllib Movie Recommender System
+   
 
 ## What is Machine Learning?
 
