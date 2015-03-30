@@ -1,9 +1,7 @@
 # Mahout-Vs-MLlib
 
 # What is Machine Learning?
-```
-ref :- https://share.coursera.org/wiki/index.php/ML:Introduction
-```
+
 
 Two definitions of Machine Learning are offered. Arthur Samuel described it as: "the field of study that gives computers the ability to learn without being explicitly programmed." This is an older, informal definition.
 
@@ -14,6 +12,7 @@ Example: Assume that we are creating a cricket game for 1 over to bat with a tar
 E = the experience of playing many games of cricket
 T = the task of playing cricket.
 P = the probability that you will win the next game.
+
 
 #Supervised Learning
 In supervised learning, we are given a data set and already know what our correct output should look like, having the idea that there is a relationship between the input and the output.
@@ -32,6 +31,11 @@ Unsupervised learning, on the other hand, allows us to approach problems with li
     - Gradient Descent for Linear Regression
 
 #Commonflow 
+
+
+#Reference
+
+https://share.coursera.org/wiki/index.php/ML:Introduction
 
 
 #Machine Learning with Mahout 
