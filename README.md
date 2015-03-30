@@ -163,6 +163,13 @@ public class recommender {
 }
 
 ```
+###Output
+```
+RecommendedItem[item:12, value:4.8328104]
+RecommendedItem[item:13, value:4.6656213]
+RecommendedItem[item:14, value:4.331242]
+
+```
 ### Evaluate model
 
 ```
@@ -212,7 +219,11 @@ public class EvaluateRecommender {
 
 }
 ```
+###Output
+```
+1.2027597427368164
 
+```
 
 #Machine Learning with Spark
 
