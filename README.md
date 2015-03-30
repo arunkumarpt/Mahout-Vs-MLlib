@@ -243,15 +243,15 @@ Spark excels at iterative computation, enabling MLlib to run fast. At the same t
 ###Algorithms
 MLlib 1.1 contains the following algorithms:
 
-linear SVM and logistic regression
-classification and regression tree
-k-means clustering
-recommendation via alternating least squares
-singular value decomposition
-linear regression with L1- and L2-regularization
-multinomial naive Bayes
-basic statistics
-feature transformations
+     - linear SVM and logistic regression
+     - classification and regression tree
+     - k-means clustering
+     - recommendation via alternating least squares
+     - singular value decomposition
+     - linear regression with L1- and L2-regularization
+     - multinomial naive Bayes
+     - basic statistics
+     - feature transformations
 
 
 #####References
