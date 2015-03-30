@@ -30,11 +30,13 @@ Example: Assume that we are creating a cricket game for 1 over to bat with a tar
 
 ##Supervised Learning
 In supervised learning, we are given a data set and already know what our correct output should look like, having the idea that there is a relationship between the input and the output.
+
     - Regression
     - Classification
 
 ##Unsupervised Learning
 Unsupervised learning, on the other hand, allows us to approach problems with little or no idea what our results should look like. We can derive structure from data where we don't necessarily know the effect of the variables.
+
     - Clustering
 
 ##Linear Regression with One Variable
