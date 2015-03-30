@@ -9,9 +9,9 @@ Two definitions of Machine Learning are offered. Arthur Samuel described it as: 
 Tom Mitchell provides a more modern definition: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."
 
 Example: Assume that we are creating a cricket game for 1 over to bat with a target of 10 runs.
-E = the experience of playing many games of cricket
-T = the task of playing cricket.
-P = the probability that you will win the next game.
+    - E = the experience of playing many games of cricket
+    - T = the task of playing cricket.
+    - P = the probability that you will win the next game.
 
 
 #Supervised Learning
