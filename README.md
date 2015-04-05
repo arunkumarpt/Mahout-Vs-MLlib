@@ -266,7 +266,7 @@ http://faustineinsun.blogspot.com/2014/01/to-do-run-mahout-build-in-examples-on.
 
 #Mahout Vs Spark
 
-###The main difference will came from underlying frameworks. 
+###The main difference will come from underlying frameworks. 
 In case of Mahout it is Hadoop MapReduce and in case of MLib it is Spark. To be more specific - from the difference in per job overhead. 
 
 If Your ML algorithm mapped to the single MR job - main difference will be only startup overhead, which is dozens of seconds for Hadoop MR, and let say 1 second for Spark. So in case of model training it is not that important.
